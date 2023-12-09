@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from dj_form.forms import FormAPI
+from dj_form.forms2 import Form2
 # from . forms import FormAPI
 
 # Create your views here.
@@ -16,4 +17,5 @@ def form_api(request):
     return render(request, 'formApi.html', {'form': form})
 
 def model_forms(request):
-    return render(request, 'modelForm.html')
+    model_forms = Form2()
+    return render(request, 'modelForm.html', {'form': model_forms})

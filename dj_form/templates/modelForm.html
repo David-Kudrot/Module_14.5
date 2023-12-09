@@ -2,8 +2,15 @@
 
 
 {% block content %}
+
+<h1 class="text-center">This is form api page</h1>
+
+{% load crispy_forms_tags %}
+
+<form method="POST" action="" class="form" style="width:50%; margin:auto">
+    {% csrf_token %}
+    {{form|crispy}}
+    <button class="btn btn-primary mt-3">Submit</button>
+</form>
   
-<h1>This is model form page</h1>
-
-
 {% endblock content %}
